@@ -58,7 +58,7 @@ $npm run dev
   |   |--layui.js
   |--.gitignore
   |--package.json
-  |--webpack.config.js
+  |--webpack.config.js webpack配置文件
 ```
 ## 添加页面的规范
 * 在page里面新建一个目录，比如test,
