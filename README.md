@@ -61,9 +61,9 @@ $npm run dev
   |--webpack.config.js
 ```
 ## 添加页面的规范
-1. 在page里面新建一个目录，比如test,
-2. 新建test.ejs, test.scss, test.js
-3. 在webpack里面添加一个入口
+* 在page里面新建一个目录，比如test,
+* 新建test.ejs, test.scss, test.js
+* 在webpack里面添加一个入口
 
 ```js
        entry:{
@@ -71,7 +71,8 @@ $npm run dev
        }
 ```
 
-4. 添加htmlwebpackplugin 项目
+* 添加htmlwebpackplugin 项目
+
 ```js
     new HtmlWebpackPlugin({
             filename: "test.html", //目标文件名
