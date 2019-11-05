@@ -64,11 +64,13 @@ $npm run dev
 1. 在page里面新建一个目录，比如test,
 2. 新建test.ejs, test.scss, test.js
 3. 在webpack里面添加一个入口
+
 ```js
        entry:{
            index: "./src/pages/test/test.js",
        }
 ```
+
 4. 添加htmlwebpackplugin 项目
 ```js
     new HtmlWebpackPlugin({
