@@ -1,0 +1,256 @@
+$header-small: 2rem;
+$header-bigger: 9rem;
+$header-color: lightgray;
+$theme-color: #E71319;
+$nav-text-color: #aa8b5a;
+
+
+h1.title {
+    font: {
+        size: 2rem;
+        weight: 300;
+        family: "microsoft yahei";
+    }
+    margin: 1.25rem auto 1rem 0;
+}
+
+.plain-text {
+
+    p {
+        text-indent: 2em;
+    }
+    font: {
+        size:1rem;
+    }
+
+}
+
+
+/**
+ * Public Footer styles
+ */
+
+//  footer>div.cloud {
+// 	height: 50px;
+// 	background: 0/contain url(../img/clouds-2.png) repeat-x;
+// 	width: 100%;
+// 	position: relative;
+// 	top: -12%;
+// }
+
+$footer-base: #AB0000;
+$footer-text-color:lighten($footer-base,80%);
+footer {
+    margin-top:3rem;
+    padding-top:1em;
+	width: 100%;
+	height: 200px;
+	background: $footer-base;
+    position: relative;
+    font-weight: 300;
+}
+
+.fill {
+	width: 80%;
+	height: 70%;
+	display: flex;
+	flex-grow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	top: 1em;
+	margin: 0 auto;
+}
+
+footer.fill>div {
+	flex: 1;
+	color:  $footer-text-color;
+	/*background: rgba(255,255,255,0.2);*/
+	background-clip: content-box;
+	padding: 0 2%;
+	width: 20px;
+	height: 100%;
+	/*text-align: center;*/
+}
+
+footer.fill>div>h1 {
+	font-size: 1.25em;
+}
+
+footer.fill>div>hr {
+	border: none;
+	height: 1px;
+	border-radius: 1px;
+	text-align: left;
+	width: 65%;
+    margin: 0 0;
+    background: $footer-text-color;
+}
+
+footer.fill>div>ul {
+	font-family: "微软雅黑";
+	list-style: none;
+	color: $footer-text-color;
+	padding: 0.15rem;
+	font-size: 0.90rem;
+}
+
+footer.fill>div>ul.tail {
+	position: absolute;
+	top:0;
+	width: 30%;
+}
+
+footer.fill>div li {
+	margin-bottom: 0.3rem;
+}
+
+div.empty {
+	width: 100%;
+	height: 5.5rem;
+}
+
+$image-list: 'https://www.tongrentangcm.com/attachment/banner/1561020917OCeOQ.jpg' 
+             'https://www.tongrentangcm.com/attachment/banner/1479198444W0aMC.jpg' 
+             'https://www.tongrentangcm.com/attachment/banner/154442104040QYB.jpg' 
+             'https://www.tongrentangcm.com/attachment/banner/1479198454orS1o.jpg';
+$counter: 1;
+
+header {
+    height: $header-bigger;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: {
+        color: rgba(255,255,255, 0.9)
+    };
+    z-index: 1;
+}
+
+header.stay {
+    position: relative;
+}
+
+#banner {
+    position: relative;
+    
+     @each $i in $image-list {
+        &  div#carousel-item > div:nth-child(#{$counter}){
+            background: {
+                image: url($i);
+                size: cover;
+                // color:red;
+            }
+            height: 100%;
+            width:100%;
+            
+        }
+        $counter: $counter + 1;
+     }
+}
+
+.top-info{
+    width: calc( 100% - 4rem );
+    height: 30px;
+    background: {
+        color:rgba(57,61,73,0.6)
+    };
+    color: white;
+    padding: 0.1rem 2rem;
+    
+    .right-status{
+        text-align: right;
+        line-height: 220%;
+        a {
+            text-decoration: none;
+            color:whitesmoke;
+        }
+    }
+}
+
+.logo {
+    position: relative;
+    padding: 1rem 0 0 2rem;
+    
+}
+nav {
+    width: 100%;
+    height:80px;
+    position: relative;
+    // background-color:red;
+    // overflow: hidden;
+    .index-menu {
+        position: absolute;
+        right: 2rem;
+        top:   2rem;
+    }
+}
+
+.separator{
+    margin-top: 2rem !important;
+}
+
+/**
+ Layui injection
+
+**/
+dd.layui-this a{
+    background: lighten($theme-color,45%) !important;
+    &:active {
+        background: lighten($theme-color,45%) !important;
+    }
+}
+.layui-nav {
+    background: {
+        color:transparent !important
+    };
+    .layui-nav-item{
+        color:$nav-text-color !important;
+        a {
+            color:$nav-text-color !important;
+            font: {
+                size: 1.1rem;
+                weight: 900;
+            }
+        }
+    }
+    .layui-nav-itemed {
+        .layui-nav-more {
+            border: {
+                top-color: transparent !important;
+            }
+        }
+       
+    }
+    .layui-nav-bar {
+        display: none;
+    }
+    .layui-this::after{
+        background: #aa8b5a !important;
+    }
+
+   
+
+    .layui-nav-child {
+        a {
+            font: {
+                size:1rem;
+                weight:400;
+            }
+        }
+    }
+    .layui-nav-more {
+        border: {
+            top-color: $theme-color !important;
+        }
+        
+    }
+    .layui-nav-mored{
+        border: {
+            top-color: transparent !important;
+            bottom-color: $theme-color !important;
+        }
+    }
+}
+

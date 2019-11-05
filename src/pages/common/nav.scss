@@ -1,0 +1,44 @@
+$nav-text-color: #aa8b5a;
+
+
+@mixin appear-item {
+    display: block;
+    opacity: 1;
+    transition: all 0.3s;
+    visibility: visible;
+    pointer-events: all;
+}
+
+
+
+.nav-child-three{
+
+    &:hover{
+
+        + ol.nav-three{
+            @include appear-item;
+        }
+    }
+    &:active {
+        background: lighten($theme-color,45%) !important;
+    }
+}
+
+
+ol.nav-three{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: white;
+    min-width: 50px;
+    padding: 0.5rem 0.25rem;
+    border: 1px solid lighten($nav-text-color,30%);
+    opacity: 0;
+    transition: all 0.3s;
+    visibility: hidden;
+    pointer-events: none;
+    &:hover {
+        @include appear-item;
+    }
+   
+}

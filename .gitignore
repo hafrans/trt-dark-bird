@@ -1,0 +1,12 @@
+#
+#  Git Ignores
+#
+#
+#
+
+
+*.tmp
+
+/dist/
+/node_modules/
+

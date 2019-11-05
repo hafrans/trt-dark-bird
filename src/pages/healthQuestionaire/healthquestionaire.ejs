@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/static/css/layui.css" rel="stylesheet" />
+    <title>同仁堂智慧养生平台</title>
+</head>
+
+<body>
+    <!-- 
+        项目DarkBird Build 1
+        @author hafrans@163.com
+        @update Nov.4 2019
+     -->
+    <header>
+        <%=require("../common/small-header.html") %>
+        <%=require("../common/common-nav.html") %>
+    </header>
+    <div class="question-big-banner">
+        <div class="guidance">
+            <h1>你真正了解自己吗？</h1>
+            <div class="description" style="text-align: left;">
+                <p>你的日常生活习惯会对你的身体带来怎样的影响？如何调整自己生活习惯摆脱自己的亚健康状态？</p>
+                该问卷将收集你的日常生活习惯，并通过人工智能与大数据分析获得个人习惯带来的影响并会对你日后生活习惯提出更好的建议，从而摆脱亚健康、预防慢性病、享受高品质的健康人生。我们将充分保护您的隐私，您的所有数据均不会提供给第三方进行数据分析。</p>
+            </div>
+            <div class="accept">
+                <button>开始答卷</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-container separator">
+
+        <div class="layui-row">
+            <div class="layui-col-md7">
+                <h1 class="title">生活小调查</h1>
+                <div class="plain-text">
+                    <p>
+                        远程健康养护项目积极响应十九大号召，为落实健康体系改革做出贡献。这种集预防、治疗、康复和管理为一体的健康服务，将成为未来健康服务管理的新趋势。远程健康养护针对当前“文明病、生活方式病”导致的“亚健康状态”和慢性代谢疾病，融合现代健康管理理念和传统中医养生理论代人提供一系列全新、科学、正确的专业调理亚健康的健康管理方案和传播健康养生理念、倡导正确生活习惯和饮食习惯，帮助现代人摆脱亚健康、预防慢性病、享受高品质的健康人生。
+                    </p>
+                    <p>
+                        以“预防为主”为创建理念，主要面向中高产阶级人群提供科学的基因检测、远程就诊、个性化养护、私人教练等全面健康管理方案。本平台提供的服务是集预防、治疗、康复和管理为一体的个性化健康服务。 PC端、移动端客户均可以享受到精确、全面、便捷的服务。
+                    </p>
+        
+                </div>
+            </div>
+            <div class="layui-col-md1">&nbsp;</div>
+            <div class="layui-col-md4">
+                <img src="<%=require('../../assets/image/about_us_photo.png')%>">
+            </div>
+
+
+        </div>
+
+    </div>
+    
+    <%=require("../common/common-footer.html") %>
+</body>
+
+</html>
